@@ -1,0 +1,16 @@
+name: mldoctor
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.11.*
+  - pip
+  - cudatoolkit
+  - pip:
+    - torchvision
+    - scikit-learn
+    - tqdm
+    - numpy
+    - torch
+    - scipy
+    - pandas
