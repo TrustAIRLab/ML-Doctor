@@ -71,7 +71,7 @@ We have four modes in this function
 </tbody></table>
 
 #### Buliding attack dataset
-When using mode 0 and mode 3, i.e. having shadow models, users should choose [```get_attack_dataset_with_shadow```](./doctor/meminf.py#L552) function.
+When using mode 0 and mode 3, i.e. with shadow models, users should choose [```get_attack_dataset_with_shadow```](./doctor/meminf.py#L552) function.
 For the others (mode 1 and mode 2), it should be [```get_attack_dataset_without_shadow```](./doctor/meminf.py#L526) function.
 
 #### Choosing attack model
