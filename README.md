@@ -27,7 +27,7 @@ conda activate ML-Doctor
 
 ## Evaluate
 
-```python demo.py --attack_type X --dataset Y --mode Z```
+```python demo.py --attack_type C --dataset T --mode R --model L```
 
 <table><tbody>
 <!-- TABLE BODY -->
@@ -48,6 +48,7 @@ conda activate ML-Doctor
 </tbody></table>
 
 For dataset name, there are 4 datasets in the code, namely CelebA, FMNIST (Fashion-MNIST), STL10, and UTKFace.
+For the models, we provide standard AlexNet, CNN, ResNet, and VGG, from PyTorch.
 
 ### For MemInf
 We have four modes in this function
