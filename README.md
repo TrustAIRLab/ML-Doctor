@@ -48,7 +48,7 @@ conda activate ML-Doctor
 </tbody></table>
 
 For dataset name, there are 4 datasets in the code, namely CelebA, FMNIST (Fashion-MNIST), STL10, and UTKFace.
-For the models, we provide standard AlexNet, CNN, ResNet, and VGG, from PyTorch.
+For the models, we provide standard AlexNet, ResNet, and VGG, from PyTorch, and a CNN model (containing 2 convolutional layers and 2 fully connected layers).
 
 ### For MemInf
 We have four modes in this function
