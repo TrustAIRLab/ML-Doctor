@@ -2,6 +2,7 @@ import torch
 import pickle
 import torch.nn as nn
 import torch.optim as optim
+import torch.nn.functional as F
 
 from utils.define_models import *
 from sklearn.metrics import f1_score
