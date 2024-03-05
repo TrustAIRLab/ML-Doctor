@@ -149,8 +149,8 @@ class CelebA(torch.utils.data.Dataset):
         self.attr_list = attr_list
 
         fn = partial(os.path.join, self.root, self.base_folder)
-        splits = pandas.read_csv(fn("list_eval_partition.txt"), delim_whitespace=True, header=None, index_col=0)
-        attr = pandas.read_csv(fn("list_attr_celeba.txt"), delim_whitespace=True, header=1)
+        splits = pandas.read_csv(fn("list_eval_partition.txt"), sep='\s+', header=None, index_col=0)
+        attr = pandas.read_csv(fn("list_attr_celeba.txt"), sep='\s+', header=1)
 
         mask = slice(None)
 
