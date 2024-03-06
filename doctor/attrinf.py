@@ -1,3 +1,4 @@
+import re
 import torch
 import pickle
 import torch.nn as nn
@@ -54,13 +55,21 @@ class attack_training():
         if 1 > len(temp):
             raise IndexError('layer is out of range')
 
-        name = temp[-2].split('.')
-        var = eval('self.target_model.' + name[0])
+        name = temp[-2].split('.weight')[0]
+        num = re.findall("\.\d+", name)
+        if len(num) == 0:
+            var = eval('self.target_model.' + name)
+        else:
+            suffix = name.split(num[0])[0]
+            prefix = name.split(num[0])[1]
+            var = eval('self.target_model.' + suffix + f'[{num[0][1]}]' + prefix)
+        
+        
         out = {}
-        var[int(name[1])].register_forward_hook(self._get_activation(name[1], out))
+        var.register_forward_hook(self._get_activation(name, out))
         _ = self.target_model(x)
 
-        return out[name[1]]
+        return out[name]
 
     # Training
     def train(self, epoch):
