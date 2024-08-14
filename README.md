@@ -6,6 +6,8 @@
 This is the code for our USENIX Security 22 paper [ML-Doctor: Holistic Risk Assessment of Inference Attacks Against Machine Learning Models](https://www.usenix.org/conference/usenixsecurity22/presentation/liu-yugeng).
 In general, ML-Doctor is a modular framework geared to evaluate the four inference attacks, i.e., Membership Inference (MemInf), Model Inversion (ModInv), Attribute Inference (AttrInv), and Model Stealing (ModSteal). 
 
+We don't apply differential privacy in this repo. If you are interested, check our [previous version](https://github.com/liuyugeng/ML-Doctor).
+
 ## Build Datasets
 We prefer the users could provide the dataloader by themselves. But we show the demo dataloader in the code. Due to the size of the dataset, we won't upload it to github.
 
@@ -27,7 +29,7 @@ conda activate ML-Doctor
 
 ## Evaluate
 
-```python demo.py --attack_type C --dataset T --mode R --model L```
+```python main.py --attack_type C --dataset T --mode R --model L```
 
 <table><tbody>
 <!-- TABLE BODY -->
